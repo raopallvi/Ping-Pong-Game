@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(45deg, rgb(36, 35, 35), rgb(3, 3, 3));
+    /* to add the blurry effect on any element */
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+}
+
+#game-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#game-board #game-net {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5px;
+    width: 90%;
+    opacity: 0.1;
+}
+
+.net-div {
+    height: 100%;
+    width: 10%;
+    background-color: aliceblue;
+    border-radius: 40px;
+
+}
+
+.player {
+    height: 25px;
+    width: 140px;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 28px;
+    z-index: 2;
+    user-select: none;
+}
+
+#player1 {
+    top: 5px;
+    background: radial-gradient(rgb(241, 143, 143), rgb(250, 34, 34));
+    box-shadow: 0px 0px 100px 2px red;
+}
+
+#player2 {
+    bottom: 5px;
+    background: radial-gradient(rgb(142, 142, 236), blue);
+    box-shadow: 0px 0px 100px 2px blue;
+}
+
+#ball {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(rgb(243, 49, 49), rgb(57, 57, 240));
+}
+
+.player-score {
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    user-select: none;
+}
+
+#player1-score {
+    right: 20px;
+    top: 15px;
+}
+
+#player2-score {
+    bottom: 15px;
+    right: 20px;
+}
+
+#restart {
+    height: 50px;
+    width: 50px;
+    color: rgb(228, 225, 225);
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.play-pause {
+    height: 50px;
+    width: 50px;
+    color: rgb(228, 225, 225);
+    font-size: 25px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    visibility: hidden;
+}
+
+
+/* play - menu */
+
+#play-menu {
+    visibility: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    height: 40vh;
+    width: 30vw;
+    color: white;
+    font-size: 2vw;
+    background-color: rgb(106, 106, 223);
+    box-shadow: 0px 0px 500px 400px rgb(148, 148, 240);
+    transition: all 0.5s ease-in-out;
+    z-index: 4;
+
+}
+
+#play-menu label {
+    font-weight: 600;
+}
+
+#play-menu input {
+    border: none;
+    background-color: rgb(119, 119, 236);
+    height: 30px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 60%;
+    font-size: 20px;
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+.input-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#game-result {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    height: 40vh;
+    width: 30vw;
+    color: white;
+    font-size: 2vw;
+    background-color: yellowgreen;
+    box-shadow: 0px 0px 500px 400px rgb(187, 231, 98);
+    transition: all 0.5s ease-in-out;
+}
+
+#play-menu input::placeholder {
+    font-size: 23px;
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+#play-menu input:focus {
+    font-size: 20px;
+    outline: none;
+    color: whitesmoke;
+    opacity: 0.8;
+    background-color: rgb(119, 119, 236);
+}
+
+.game-play-button {
+    height: 40px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: greenyellow;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(68, 65, 65);
+    font-weight: 900;
+    font-size: 2vw;
+}
+
+
+@media screen and (max-width: 800px) {
+    #play-menu {
+        height: 50vh;
+        width: 50vw;
+        font-size: 22px;
+    }
+
+    #game-result {
+        height: 50vh;
+        width: 50vw;
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 550px) {
+    #play-menu {
+        height: 50vh;
+        width: 60vw;
+        font-size: 24px;
+    }
+
+    #game-result {
+        height: 50vh;
+        width: 60vw;
+        font-size: 24px;
+    }
+    .game-play-button {
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 450px) {
+    #play-menu {
+        height: 40vh;
+        width: 80vw;
+        font-size: 22px;
+    }
+
+    #game-result {
+        height: 40vh;
+        width: 80vw;
+        font-size: 22px;
+    }
+
+    #ball {
+        height: 20px;
+        width: 20px;
+    }
+
+    .player {
+        height: 20px;
+        width: 70px;
+        font-size: 15px;
+    }
+    .game-play-button {
+        font-size: 5vw;
+    }
+}

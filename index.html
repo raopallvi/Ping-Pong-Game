@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <link rel="icon" href = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Video-Game-Controller-Icon.svg">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="game-board">
+        <div id="game-net" class="net">
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+            <div class="net-div"></div>
+        </div>
+        <div id="player1" class="player">Player1</div>
+        <div id="player2" class="player">Player2</div>
+        <div id="ball"></div>
+        <div id="player1-score" class="player-score">0</div>
+        <div id="player2-score" class="player-score">0</div>
+        <button id="restart"><i class="fa fa-refresh"></i></button>
+        <button class="play-pause" id="pause"><i class="fa fa-pause"></i></button>
+        <button class="play-pause" id="played"><i class="fa fa-play"></i></button>
+
+        <div id="play-menu">
+            <div id="highest-score"><span id="score-display">Heighest Score: 0</span></div>
+            <div id="input-player1" class="input-player">
+                <label for="player1-input" style="color:rgb(238, 71, 71)">Player 1</label>
+                <input id="player1-input" placeholder="James" required>
+            </div>
+            <div id="input-player2" class="input-player">
+                <label for="player2-input" style="color: rgb(42, 42, 207);">Player 2</label>
+                <input id="player2-input" placeholder="Mike" required>
+            </div>
+            <button id="start-button" class="game-play-button">PLAY</button>
+        </div>
+
+        <div id="game-result">
+            <span style="font-size:100px;" id="troffee">🏆</span>
+            <div id="winner-player-name" style="font-size: 30px; color: black; font-weight: 700;">Pallvi won !!</div>
+            <button id="play-again" class="game-play-button"
+                style="width:60%; color: black; background-color: rgb(104, 150, 14);">Play Again</button>
+        </div>
+    </section>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
